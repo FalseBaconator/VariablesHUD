@@ -104,7 +104,60 @@ namespace VariablesHUD
             Console.ReadKey(true);
             Console.Clear();
 
-            
+            Console.WriteLine(title + " by " + studio);
+            Console.WriteLine();
+            shield = shield - (enemyDMG / shieldDMGReduce);
+            if (shield <= 0)
+            {
+                shield = 0;
+            }
+            Console.WriteLine("Score: " + score + " | HP: " + HP + " | Shield: " + shield.ToString("0.00") + " | Lives: " + lives);
+            Console.WriteLine();
+            Console.WriteLine("Player blocked Enemy attack with Shield!");
+            Console.WriteLine("Shield Broke!");
+
+            Console.ReadKey(true);
+            Console.Clear();
+
+            Console.WriteLine(title + " by " + studio);
+            Console.WriteLine();
+            HP = HP - enemyDMG;
+            Console.WriteLine("Score: " + score + " | HP: " + HP + " | Shield: " + shield.ToString("0.00") + " | Lives: " + lives);
+            Console.WriteLine();
+            Console.WriteLine("Enemy attacked Player!");
+
+            Console.ReadKey(true);
+            Console.Clear();
+
+            Console.WriteLine(title + " by " + studio);
+            Console.WriteLine();
+            HP = HP - enemyDMG;
+            Console.WriteLine("Score: " + score + " | HP: " + HP + " | Shield: " + shield.ToString("0.00") + " | Lives: " + lives);
+            Console.WriteLine();
+            Console.WriteLine("Enemy attacked Player!");
+
+            Console.ReadKey(true);
+            Console.Clear();
+
+            Console.WriteLine(title + " by " + studio);
+            Console.WriteLine();
+            HP = HP - enemyDMG;
+            Console.WriteLine("Score: " + score + " | HP: " + HP + " | Shield: " + shield.ToString("0.00") + " | Lives: " + lives);
+            Console.WriteLine();
+            Console.WriteLine("Enemy attacked Player!");
+
+            Console.ReadKey(true);
+            Console.Clear();
+
+            Console.WriteLine(title + " by " + studio);
+            Console.WriteLine();
+            score = score + (enemyScore * scoreMultiplier);
+            Console.WriteLine("Score: " + score + " | HP: " + HP + " | Shield: " + shield.ToString("0.00") + " | Lives: " + lives);
+            Console.WriteLine();
+            Console.WriteLine("Player killed Enemy!");
+
+            Console.ReadKey(true);
+            Console.Clear();
 
         }
     }
