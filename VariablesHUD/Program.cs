@@ -12,6 +12,9 @@ namespace VariablesHUD
 
         static void Main(string[] args)
         {
+
+            Console.ForegroundColor = ConsoleColor.Green;
+
             string studio = "Fake Bacon Games";
             string title = "Not A Real Game";
             int score = 0;
@@ -223,6 +226,8 @@ namespace VariablesHUD
             Console.ReadKey(true);
             Console.Clear();
 
+
+            Console.ForegroundColor = ConsoleColor.Red;
             Console.WriteLine(title + " by " + studio);
             Console.WriteLine();
             HP = HP - lavaDMG;
@@ -238,6 +243,7 @@ namespace VariablesHUD
             Console.ReadKey(true);
             Console.Clear();
 
+            Console.ForegroundColor = ConsoleColor.Green;
             Console.WriteLine(title + " by " + studio);
             Console.WriteLine();
             HP = HPMax;
@@ -249,6 +255,7 @@ namespace VariablesHUD
             Console.ReadKey(true);
             Console.Clear();
 
+            Console.ForegroundColor = ConsoleColor.Red;
             Console.WriteLine(title + " by " + studio);
             Console.WriteLine();
             HP = HP - lavaDMG;
@@ -264,6 +271,7 @@ namespace VariablesHUD
             Console.ReadKey(true);
             Console.Clear();
 
+            Console.ForegroundColor = ConsoleColor.Green;
             Console.WriteLine(title + " by " + studio);
             Console.WriteLine();
             HP = HPMax;
