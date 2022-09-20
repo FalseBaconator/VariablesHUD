@@ -16,7 +16,8 @@ namespace VariablesHUD
             string title = "Not A Real Game";
             int score = 0;
             int enemyScore = 10;
-            int scoreMulitplyer = 1;
+            int scoreMultiplier = 1;
+            int scoreMultiplyItem = 2;
             int HP = 100;
             int HPMax = 100;
             int enemyDMG = 10;
@@ -28,7 +29,11 @@ namespace VariablesHUD
             float shieldDMGReduce = 2.0f;
             float shieldFull = 10.0f;
 
-            
+            Console.WriteLine(title + " by " + studio);
+            Console.WriteLine();
+            Console.WriteLine("Score: " + score + " | HP: " + HP + " | Shield: " + shield + " | Lives: " + lives);
+
+            Console.ReadKey(true);
 
         }
     }
