@@ -26,12 +26,12 @@ namespace VariablesHUD
             int loseLife = 1;
             int oneUp = 1;
             float shield = 0.0f;
-            float shieldDMGReduce = 2.0f;
+            float shieldDMGReduce = 3.0f;
             float shieldFull = 10.0f;
 
             Console.WriteLine(title + " by " + studio);
             Console.WriteLine();
-            Console.WriteLine("Score: " + score + " | HP: " + HP + " | Shield: " + shield + " | Lives: " + lives);
+            Console.WriteLine("Score: " + score + " | HP: " + HP + " | Shield: " + shield.ToString("0.00") + " | Lives: " + lives);
 
             Console.ReadKey(true);
             Console.Clear();
@@ -39,7 +39,7 @@ namespace VariablesHUD
             Console.WriteLine(title + " by " + studio);
             Console.WriteLine();
             HP = HP - enemyDMG;
-            Console.WriteLine("Score: " + score + " | HP: " + HP + " | Shield: " + shield + " | Lives: " + lives);
+            Console.WriteLine("Score: " + score + " | HP: " + HP + " | Shield: " + shield.ToString("0.00") + " | Lives: " + lives);
             Console.WriteLine();
             Console.WriteLine("Enemy attacked Player!");
 
@@ -48,13 +48,63 @@ namespace VariablesHUD
 
             Console.WriteLine(title + " by " + studio);
             Console.WriteLine();
-            score = score + enemyScore * scoreMultiplier;
-            Console.WriteLine("Score: " + score + " | HP: " + HP + " | Shield: " + shield + " | Lives: " + lives);
+            score = score + (enemyScore * scoreMultiplier);
+            Console.WriteLine("Score: " + score + " | HP: " + HP + " | Shield: " + shield.ToString("0.00") + " | Lives: " + lives);
             Console.WriteLine();
             Console.WriteLine("Player killed Enemy");
 
             Console.ReadKey(true);
             Console.Clear();
+
+            Console.WriteLine(title + " by " + studio);
+            Console.WriteLine();
+            shield = shieldFull;
+            Console.WriteLine("Score: " + score + " | HP: " + HP + " | Shield: " + shield.ToString("0.00") + " | Lives: " + lives);
+            Console.WriteLine();
+            Console.WriteLine("Player found Shield!");
+
+            Console.ReadKey(true);
+            Console.Clear();
+
+            Console.WriteLine(title + " by " + studio);
+            Console.WriteLine();
+            shield = shield - (enemyDMG / shieldDMGReduce);
+            if (shield <= 0)
+            {
+                shield = 0;
+            }
+            Console.WriteLine("Score: " + score + " | HP: " + HP + " | Shield: " + shield.ToString("0.00") + " | Lives: " + lives);
+            Console.WriteLine();
+            Console.WriteLine("Player blocked Enemy attack with Shield!");
+
+            Console.ReadKey(true);
+            Console.Clear();
+
+            Console.WriteLine(title + " by " + studio);
+            Console.WriteLine();
+            shield = shield - (enemyDMG / shieldDMGReduce);
+            if (shield <= 0)
+            {
+                shield = 0;
+            }
+            Console.WriteLine("Score: " + score + " | HP: " + HP + " | Shield: " + shield.ToString("0.00") + " | Lives: " + lives);
+            Console.WriteLine();
+            Console.WriteLine("Player blocked Enemy attack with Shield!");
+
+            Console.ReadKey(true);
+            Console.Clear();
+
+            Console.WriteLine(title + " by " + studio);
+            Console.WriteLine();
+            score = score + (enemyScore * scoreMultiplier);
+            Console.WriteLine("Score: " + score + " | HP: " + HP + " | Shield: " + shield.ToString("0.00") + " | Lives: " + lives);
+            Console.WriteLine();
+            Console.WriteLine("Player Killed Enemy");
+
+            Console.ReadKey(true);
+            Console.Clear();
+
+            
 
         }
     }
