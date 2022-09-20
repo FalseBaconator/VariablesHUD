@@ -159,6 +159,67 @@ namespace VariablesHUD
             Console.ReadKey(true);
             Console.Clear();
 
+            Console.WriteLine(title + " by " + studio);
+            Console.WriteLine();
+            HP = HP + healthKit;
+            Console.WriteLine("Score: " + score + " | HP: " + HP + " | Shield: " + shield.ToString("0.00") + " | Lives: " + lives);
+            Console.WriteLine();
+            Console.WriteLine("Player finds Health Kit");
+
+            Console.ReadKey(true);
+            Console.Clear();
+
+            Console.WriteLine(title + " by " + studio);
+            Console.WriteLine();
+            HP = HP - enemyDMG;
+            Console.WriteLine("Score: " + score + " | HP: " + HP + " | Shield: " + shield.ToString("0.00") + " | Lives: " + lives);
+            Console.WriteLine();
+            Console.WriteLine("Enemy attacked Player!");
+
+            Console.ReadKey(true);
+            Console.Clear();
+
+            Console.WriteLine(title + " by " + studio);
+            Console.WriteLine();
+            scoreMultiplier = scoreMultiplyItem;
+            Console.WriteLine("Score: " + score + " | HP: " + HP + " | Shield: " + shield.ToString("0.00") + " | Lives: " + lives);
+            Console.WriteLine();
+            Console.WriteLine("Player runs from Enemy and finds a Score Multiplier!");
+            Console.WriteLine("From now on score gain will be doubled!");
+
+            Console.ReadKey(true);
+            Console.Clear();
+
+            Console.WriteLine(title + " by " + studio);
+            Console.WriteLine();
+            HP = HP - enemyDMG;
+            Console.WriteLine("Score: " + score + " | HP: " + HP + " | Shield: " + shield.ToString("0.00") + " | Lives: " + lives);
+            Console.WriteLine();
+            Console.WriteLine("Enemy attacked Player!");
+
+            Console.ReadKey(true);
+            Console.Clear();
+
+            Console.WriteLine(title + " by " + studio);
+            Console.WriteLine();
+            score = score + (enemyScore * scoreMultiplier);
+            Console.WriteLine("Score: " + score + " | HP: " + HP + " | Shield: " + shield.ToString("0.00") + " | Lives: " + lives);
+            Console.WriteLine();
+            Console.WriteLine("Player killed Enemy!");
+
+            Console.ReadKey(true);
+            Console.Clear();
+
+            Console.WriteLine(title + " by " + studio);
+            Console.WriteLine();
+            lives = lives + oneUp;
+            Console.WriteLine("Score: " + score + " | HP: " + HP + " | Shield: " + shield.ToString("0.00") + " | Lives: " + lives);
+            Console.WriteLine();
+            Console.WriteLine("Player found a 1UP!");
+
+            Console.ReadKey(true);
+            Console.Clear();
+
         }
     }
 }
