@@ -249,6 +249,32 @@ namespace VariablesHUD
             Console.ReadKey(true);
             Console.Clear();
 
+            Console.WriteLine(title + " by " + studio);
+            Console.WriteLine();
+            HP = HP - lavaDMG;
+            if (HP <= 0)
+            {
+                HP = HPMin;
+            }
+            Console.WriteLine("Score: " + score + " | HP: " + HP + " | Shield: " + shield.ToString("0.00") + " | Lives: " + lives);
+            Console.WriteLine();
+            Console.WriteLine("Player fell in Lava!");
+            Console.WriteLine("Player Died!");
+
+            Console.ReadKey(true);
+            Console.Clear();
+
+            Console.WriteLine(title + " by " + studio);
+            Console.WriteLine();
+            HP = HPMax;
+            lives = lives - loseLife;
+            Console.WriteLine("Score: " + score + " | HP: " + HP + " | Shield: " + shield.ToString("0.00") + " | Lives: " + lives);
+            Console.WriteLine();
+            Console.WriteLine("Player Respawned!");
+
+            Console.ReadKey(true);
+            Console.Clear();
+
         }
     }
 }
