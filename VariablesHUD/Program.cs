@@ -19,6 +19,7 @@ namespace VariablesHUD
             int scoreMultiplier = 1;
             int scoreMultiplyItem = 2;
             int HP = 100;
+            int HPMin = 0;
             int HPMax = 100;
             int enemyDMG = 10;
             int healthKit = 25;
@@ -27,7 +28,9 @@ namespace VariablesHUD
             int oneUp = 1;
             float shield = 0.0f;
             float shieldDMGReduce = 3.0f;
+            float shieldMin = 0.0f;
             float shieldFull = 10.0f;
+            int lavaDMG = 100;
 
             Console.WriteLine(title + " by " + studio);
             Console.WriteLine();
@@ -109,7 +112,7 @@ namespace VariablesHUD
             shield = shield - (enemyDMG / shieldDMGReduce);
             if (shield <= 0)
             {
-                shield = 0;
+                shield = shieldMin;
             }
             Console.WriteLine("Score: " + score + " | HP: " + HP + " | Shield: " + shield.ToString("0.00") + " | Lives: " + lives);
             Console.WriteLine();
@@ -216,6 +219,32 @@ namespace VariablesHUD
             Console.WriteLine("Score: " + score + " | HP: " + HP + " | Shield: " + shield.ToString("0.00") + " | Lives: " + lives);
             Console.WriteLine();
             Console.WriteLine("Player found a 1UP!");
+
+            Console.ReadKey(true);
+            Console.Clear();
+
+            Console.WriteLine(title + " by " + studio);
+            Console.WriteLine();
+            HP = HP - lavaDMG;
+            if (HP <= 0)
+            {
+                HP = HPMin;
+            }
+            Console.WriteLine("Score: " + score + " | HP: " + HP + " | Shield: " + shield.ToString("0.00") + " | Lives: " + lives);
+            Console.WriteLine();
+            Console.WriteLine("Player fell in Lava!");
+            Console.WriteLine("Player Died!");
+
+            Console.ReadKey(true);
+            Console.Clear();
+
+            Console.WriteLine(title + " by " + studio);
+            Console.WriteLine();
+            HP = HPMax;
+            lives = lives - loseLife;
+            Console.WriteLine("Score: " + score + " | HP: " + HP + " | Shield: " + shield.ToString("0.00") + " | Lives: " + lives);
+            Console.WriteLine();
+            Console.WriteLine("Player Respawned!");
 
             Console.ReadKey(true);
             Console.Clear();
