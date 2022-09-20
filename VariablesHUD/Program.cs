@@ -34,6 +34,27 @@ namespace VariablesHUD
             Console.WriteLine("Score: " + score + " | HP: " + HP + " | Shield: " + shield + " | Lives: " + lives);
 
             Console.ReadKey(true);
+            Console.Clear();
+
+            Console.WriteLine(title + " by " + studio);
+            Console.WriteLine();
+            HP = HP - enemyDMG;
+            Console.WriteLine("Score: " + score + " | HP: " + HP + " | Shield: " + shield + " | Lives: " + lives);
+            Console.WriteLine();
+            Console.WriteLine("Enemy attacked Player!");
+
+            Console.ReadKey(true);
+            Console.Clear();
+
+            Console.WriteLine(title + " by " + studio);
+            Console.WriteLine();
+            score = score + enemyScore * scoreMultiplier;
+            Console.WriteLine("Score: " + score + " | HP: " + HP + " | Shield: " + shield + " | Lives: " + lives);
+            Console.WriteLine();
+            Console.WriteLine("Player killed Enemy");
+
+            Console.ReadKey(true);
+            Console.Clear();
 
         }
     }
